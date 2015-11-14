@@ -3,7 +3,7 @@ class grid():
 	cells = gridCells()
 	width = data.info.width / cells.cell_width
         height = data.info.height / cells.cell_height
-	self.map[
+	self.map[width,height]
 
 class square():
 	def __init__(self):
@@ -35,6 +35,7 @@ def neighbor_nodes(pos):
 	children[2] = grid.findNode(posX+1,posY)
 	children[1] = grid.findNode(posX, posY-1)
 	children[2] = grid.findNode(posX-1,posY)
+
 	pos.children[] = neighbors[]
 		
 def stateCheck(pos):
@@ -54,5 +55,11 @@ def updateGrid(pos):
 			#paint them the color black
 			pos.children[i].getCell().color = (0,0,0)
 		else:
-			pos.children[i].getCell().color = (255,255,255)
- 
+			pos.children[i].getCell().color = (0,0,0) 
+
+def reset(map):
+	for i <= map.col_range:
+		for j <= map.row_range:
+			map[i,j].state = 0;
+			map[i,j].getCell().color = (255,255,255)
+			

@@ -31,17 +31,11 @@ class square():
 def Search(start):
 
 def neighbor_nodes(pos):
-<<<<<<< HEAD
-	children[1] = findNode(posX, posY+1)
-	children[2] = findNode(posX+1,posY)
-	children[1] = findNode(posX, posY-1)
-	children[2] = findNode(posX-1,posY)
-=======
 	children[1] = grid.findNode(posX, posY+1)
 	children[2] = grid.findNode(posX+1,posY)
 	children[1] = grid.findNode(posX, posY-1)
 	children[2] = grid.findNode(posX-1,posY)
->>>>>>> 807b0499c5a9cfe78e151fc3b516604b60ab1006
+
 	pos.children[] = neighbors[]
 		
 def stateCheck(pos):
@@ -61,19 +55,13 @@ def updateGrid(pos):
 			#paint them the color black
 			pos.children[i].getCell().color = (0,0,0)
 		else:
-<<<<<<< HEAD
 			pos.children[i].getCell().color = (0,0,0) 
 
-
 def reset(map):
-	for i <= map.col_range:
-		for j <= map.row_range:
+    map.shape[1] = row_range
+    map.shape[2] = col_range
+	for i <= col_range:
+		for j <= row_range:
 			map[i,j].state = 0;
 			map[i,j].getCell().color = (255,255,255)
-
-
-
-=======
-			pos.children[i].getCell().color = (255,255,255)
- 
->>>>>>> 807b0499c5a9cfe78e151fc3b516604b60ab1006
+			
