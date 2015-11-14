@@ -84,3 +84,12 @@ def reset(map):
 			map[i,j].state = 0;
 			map[i,j].getCell().color = (255,255,255)
 
+def nextopt(node):
+	global children_dists [[]]
+	global closest_child     #closest child to goal
+	global closest_child_dist
+	for i <= 3:
+		if node[2] =! 1: #however you access a list in a list
+			node[3,i].distance = children_dists[i]
+	min(children_dists)
+    for i <= 3:
