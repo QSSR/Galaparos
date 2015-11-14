@@ -1,9 +1,18 @@
+
 class grid():
 	def__init__(self):
 	cells = gridCells()
 	width = data.info.width / cells.cell_width
         height = data.info.height / cells.cell_height
 	self.map[width,height]
+
+#set Start Point at 0,0
+global start = square()
+start.posX = 0
+start.posY = 0
+start.D = distCheck(start)
+
+
 
 class square():
 	def __init__(self):
@@ -55,9 +64,16 @@ def updateGrid(pos):
 			pos.children[i].getCell().color = (255,255,255) 
 
 def end(pos):
+	count
     pos.checkOpts()
-    for i in pos.children.size:
+    for i in pos.children.size():
 		if pos.children[i] == null:
+			count++
+	if count == 4:
+		if pos = grid.finish:
+			return path
+		else:
+			nextOpt(start)	
 			
 def reset(map):
 	for i <= map.col_range:
