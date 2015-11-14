@@ -1,9 +1,18 @@
+
 class grid():
 	def__init__(self):
 	cells = gridCells()
 	width = data.info.width / cells.cell_width
         height = data.info.height / cells.cell_height
 	self.map[width,height]
+
+#set Start Point at 0,0
+global start = square()
+start.posX = 0
+start.posY = 0
+start.D = distCheck(start)
+
+
 
 class square():
 	def __init__(self):
@@ -28,20 +37,11 @@ class square():
 		point.z = 0
 		return point
 
-def Search(start):
-
 def neighbor_nodes(pos):
-<<<<<<< HEAD
-	children[1] = findNode(posX, posY+1)
-	children[2] = findNode(posX+1,posY)
-	children[1] = findNode(posX, posY-1)
-	children[2] = findNode(posX-1,posY)
-=======
 	children[1] = grid.findNode(posX, posY+1)
 	children[2] = grid.findNode(posX+1,posY)
 	children[1] = grid.findNode(posX, posY-1)
 	children[2] = grid.findNode(posX-1,posY)
->>>>>>> 807b0499c5a9cfe78e151fc3b516604b60ab1006
 	pos.children[] = neighbors[]
 		
 def stateCheck(pos):
@@ -61,19 +61,23 @@ def updateGrid(pos):
 			#paint them the color black
 			pos.children[i].getCell().color = (0,0,0)
 		else:
-<<<<<<< HEAD
-			pos.children[i].getCell().color = (0,0,0) 
+			pos.children[i].getCell().color = (255,255,255) 
 
-
+def end(pos):
+	count
+    pos.checkOpts()
+    for i in pos.children.size():
+		if pos.children[i] == null:
+			count++
+	if count == 4:
+		if pos = grid.finish:
+			return path
+		else:
+			nextOpt(start)	
+			
 def reset(map):
 	for i <= map.col_range:
 		for j <= map.row_range:
 			map[i,j].state = 0;
 			map[i,j].getCell().color = (255,255,255)
 
-
-
-=======
-			pos.children[i].getCell().color = (255,255,255)
- 
->>>>>>> 807b0499c5a9cfe78e151fc3b516604b60ab1006
