@@ -3,7 +3,7 @@ class grid():
 	cells = gridCells()
 	width = data.info.width / cells.cell_width
         height = data.info.height / cells.cell_height
-	self.map[width,height]
+	self.map[
 
 class square():
 	def __init__(self):
