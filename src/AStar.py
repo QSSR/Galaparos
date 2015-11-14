@@ -75,9 +75,12 @@ def end(pos):
 		else:
 			nextOpt(start)	
 			
+
 def reset(map):
-	for i <= map.col_range:
-		for j <= map.row_range:
+    map.shape[1] = row_range
+    map.shape[2] = col_range
+	for i <= col_range:
+		for j <= row_range:
 			map[i,j].state = 0;
 			map[i,j].getCell().color = (255,255,255)
 
