@@ -24,7 +24,7 @@ class square():
 def Search(start):
 
 def neighbor_nodes(pos):
-	children[1] = findN`ode(posX, posY+1)
+	children[1] = findNode(posX, posY+1)
 	children[2] = findNode(posX+1,posY)
 	children[1] = findNode(posX, posY-1)
 	children[2] = findNode(posX-1,posY)
@@ -48,3 +48,13 @@ def updateGrid(pos):
 			pos.children[i].getCell().color = (255,255,255)
 		else:
 			pos.children[i].getCell().color = (0,0,0) 
+
+
+def reset(map):
+	for i <= map.col_range:
+		for j <= map.row_range:
+			map[i,j].state = 0;
+			map[i,j].getCell().color = (255,255,255)
+
+
+
